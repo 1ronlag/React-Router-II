@@ -13,19 +13,19 @@ const Pokemon = () => {
 
     useEffect(() => {
         const getAPI = async () => {
-            const resp = await fetch("https://pokeapi.co/api/v2/pokemon/");
-            const datos = await resp.json();
+            try {
+                const resp = await fetch("https://pokeapi.co/api/v2/pokemon/");
+                const datos = await resp.json();
+                setPokemones(datos.results);
+            } catch (error) {
+                alert('No se puede mostrar la informacion solicitada')
 
-            setPokemones(datos.results);
+            }
+
+
         };
-
         getAPI();
     }, [name]);
-
-    const handleID = (event) => {
-        const pokeId = event.target.value;
-        setName(pokeId)
-    }
 
 
     const goPokemon = () => {
@@ -35,7 +35,7 @@ const Pokemon = () => {
         <>
             <Container className='my-4'>
                 <h1>Selecciona un Pokemón</h1>
-                <select className='pokeSearch my-4' onChange={handleID}>
+                <select className='pokeSearch my-4' onChange={(e) => setName(e.target.value)}>
                     <option value="">Pokemones</option>
                     {poke.map((character, index) => (
                         <option key={index} value={character.id}>{character.name}</option>
