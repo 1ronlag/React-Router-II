@@ -16,7 +16,14 @@ const Pokemon = () => {
             try {
                 const resp = await fetch("https://pokeapi.co/api/v2/pokemon/");
                 const datos = await resp.json();
-                setPokemones(datos.results);
+                if (data) {
+                    setPokemones(datos);
+                }
+                else {
+                    throw new Error('Something went wrong');
+                }
+
+
             } catch (error) {
                 alert('No se puede mostrar la informacion solicitada')
 
