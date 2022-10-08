@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* .wallpaper {
+  background-image: url(../src/assets/img/gengarvsnido.gif);
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  position: fixed;
+
+} */
+
+.container {
+  text-align: center;
+}
+
+.multitext {
+  text-align: center;
+  justify-content: center;
+}
+
+.nav-home {
+  font-size: 30px;
+  font-weight: bold;
+
+
+}
+
+.nav-pokemon {
+  font-size: 30px;
+  font-weight: bold;
+
+
+}
+.iconNav {
+  size: 150px;
+
+}
+
+.logo{
+width: 15%;
+}
+
+.pokeInfo{
+
+  text-align: center;
+}
+
+.pokeSearch{
+  min-width: 20%;
+  text-align: center;
+  font-weight: bold;
+}
+.pokeContainer{
+padding-top: 80%;
+
+}
+
+/* NavBar */
+
+.active {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.no-active {
+  color: gray;
+  text-decoration: none;
+}
+
+.gengar{
+  width: 60%;
+  margin-top: 10%;
+  border: 4px solid black;
+}
+
+
+.multitext{
+text-align: center;
+margin-left: 24%;
+margin-top: 10%;
+
+}
