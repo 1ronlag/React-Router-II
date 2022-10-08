@@ -21,8 +21,6 @@ const Pokemon = () => {
                 alert('No se puede mostrar la informacion solicitada')
 
             }
-
-
         };
         getAPI();
     }, [name]);

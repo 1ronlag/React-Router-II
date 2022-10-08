@@ -13,13 +13,19 @@ const PokeDetails = () => {
 
   useEffect(() => {
     const getAPI = async () => {
-
       try {
         const resp = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
         const data = await resp.json();
-        setPokemones(data)
+        if(data){
+      setPokemones(data)
+        }
+        else{
+          throw new Error('Something went wrong');
+        }
+       
       } catch (error) {
-        alert('No se puede mostrar la informacion solicitada')
+        // console.log("error en la solicitud", error)
+        alert ('No se puede mostrar la informacion solicitada')
       }
     };
 
