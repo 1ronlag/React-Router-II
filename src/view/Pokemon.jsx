@@ -16,22 +16,23 @@ const Pokemon = () => {
             try {
                 const resp = await fetch("https://pokeapi.co/api/v2/pokemon/");
                 const datos = await resp.json();
-                if (data) {
-                    setPokemones(datos);
+
+                if (datos) {
+
+                    setPokemones(datos.results);
                 }
                 else {
                     throw new Error('Something went wrong');
                 }
-
-
             } catch (error) {
+                // console.log("error en la solicitud", error)
                 alert('No se puede mostrar la informacion solicitada')
 
             }
+
         };
         getAPI();
     }, [name]);
-
 
     const goPokemon = () => {
         navigate(`/pokemon/${name}`);
